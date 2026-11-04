@@ -1,0 +1,26 @@
+[project]
+name = "narrador"
+version = "0.1.0"
+description = "Narração local de roteiros com OmniVoice (usado pelas skills do Claude Code)"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "omnivoice==0.2.1",
+    "lingua-language-detector>=2.0",
+    "num2words>=0.5.13",
+    "soundfile>=0.12",
+    "numpy",
+    "pyloudnorm>=0.1.1",
+    "lameenc>=1.7",
+]
+# torch/torchaudio são instalados pelo instalar.ps1 / instalar.sh,
+# com a versão certa para o hardware (CUDA, CPU ou Mac).
+
+[project.scripts]
+narrador = "narrador.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["narrador", "narrador.motores"]

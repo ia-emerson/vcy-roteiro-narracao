@@ -1,0 +1,31 @@
+VOZES DE REFERÊNCIA
+===================
+
+Cada voz são DOIS arquivos com o mesmo nome:
+
+    <idioma>_<nome>.wav   -> áudio de ~10 segundos (entre 5 e 12 s)
+    <idioma>_<nome>.txt   -> exatamente o que é falado no áudio, palavra por palavra
+
+Exemplos:
+    pt_joana.wav    + pt_joana.txt
+    pt-BR_carlos.wav + pt-BR_carlos.txt
+    en_mike.wav     + en_mike.txt
+    es_lucia.wav    + es_lucia.txt
+
+O começo do nome é o código do idioma: pt (português), en (inglês), es (espanhol),
+fr (francês), de (alemão), it (italiano), ja (japonês) etc.
+Pode haver várias vozes por idioma; a narração pergunta qual usar.
+
+COMO CONSEGUIR UMA BOA VOZ
+--------------------------
+Opção A - Gravar a sua:
+  * Lugar silencioso, sem música, sem eco; microfone perto da boca.
+  * Leia 1 ou 2 frases no MESMO tom que quer na narração (é ele que será copiado).
+  * 8 a 12 segundos, sem cortar a última palavra. Salve em .wav.
+
+Opção B - Google AI Studio (aistudio.google.com):
+  * Abra "Generate speech", escolha uma voz e cole um texto de ~25 palavras no idioma.
+  * Gere, baixe o áudio e salve como <idioma>_<nome>.wav; cole o mesmo texto no .txt.
+
+IMPORTANTE: use somente vozes que você tem direito de usar (a sua, de quem autorizou
+por escrito, ou geradas por você). Clonar a voz de outra pessoa sem permissão é proibido.

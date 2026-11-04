@@ -1,0 +1,25 @@
+# Configuração do narrador. Os valores padrão priorizam a qualidade.
+
+[motor]
+modelo = "k2-fsa/OmniVoice"
+dispositivo = "auto"      # auto | cuda | mps | cpu
+num_step = 32             # passos de geração (32 = melhor qualidade; 16 = mais rápido)
+guidance_scale = 2.0
+velocidade = 1.0          # 1.0 = natural; 0.9 = mais lento; 1.1 = mais rápido
+semente = 1234            # deixa o resultado reproduzível
+
+[divisao]
+max_caracteres = 220      # tamanho máximo de cada parte (~15 s de fala)
+
+[montagem]
+pausa_frase = 0.15        # silêncio extra entre partes do mesmo parágrafo (o OmniVoice já põe ~0,2 s)
+pausa_paragrafo = 0.50    # silêncio extra entre parágrafos
+lufs = -14.0              # volume final (padrão do YouTube)
+pico_max_db = -1.0        # pico máximo permitido
+mp3_kbps = 192
+
+[qualidade]
+tentativas = 3            # quantas vezes regenerar uma parte suspeita
+verificar_transcricao = false   # true = confere cada parte com Whisper (mais lento, baixa ~1,6 GB)
+modelo_whisper = "openai/whisper-large-v3-turbo"
+max_erro_palavras = 0.20  # taxa de erro aceitável na conferência com Whisper
